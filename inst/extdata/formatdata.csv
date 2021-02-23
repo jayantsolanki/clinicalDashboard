@@ -1,0 +1,52 @@
+fmtname,start,end,label,type
+ACN_adverse_aeaction,3,3,DOSE INCREASED,N
+ACN_adverse_aeaction,4,4,DOSE NOT CHANGED,N
+ACN_adverse_aeaction,2,2,DOSE REDUCED,N
+ACN_adverse_aeaction,1,1,DRUG INTERRUPTED,N
+ACN_adverse_aeaction,5,5,UNKNOWN,N
+AEREL_adverse_aerel,1,1,NOT RELATED,N
+AEREL_adverse_aerel,2,2,POSSIBLY RELATED,N
+AEREL_adverse_aerel,3,3,PROBABLY RELATED,N
+AESEV_adverse_aesev,1,1,MILD,N
+AESEV_adverse_aesev,2,2,MODERATE,N
+AESEV_adverse_aesev,3,3,SEVERE,N
+ARM_demographic_trt,1,1,Analgezia HCL 30 mg,N
+ARM_demographic_trt,0,0,Placebo,N
+ARMCD_demographic_trt,1,1,ALG123,N
+ARMCD_demographic_trt,0,0,PLACEBO,N
+LBCAT_labs_labcat,CHEMISTRY,CHEMISTRY,CHEMISTRY,C
+LBCAT_labs_labcat,HEMATOLOGY,HEMATOLOGY,HEMATOLOGY,C
+LBTEST_labs_labtest,ALT (SGPT),ALT (SGPT),Alanine Aminotransferase; SGPT,C
+LBTEST_labs_labtest,ALBUMIN,ALBUMIN,Albumin; Microalbumin,C
+LBTEST_labs_labtest,ALK. PHOS.,ALK. PHOS.,Alkaline Phosphatase,C
+LBTEST_labs_labtest,AST (SGOT),AST (SGOT),Aspartate Aminotransferase; SGOT,C
+LBTEST_labs_labtest,TOTAL BILI,TOTAL BILI,Bilirubin; Total Bilirubin,C
+LBTEST_labs_labtest,DIRECT BILI,DIRECT BILI,Direct Bilirubin,C
+LBTEST_labs_labtest,GGTP,GGTP,Gamma Glutamyl Transferase,C
+LBTEST_labs_labtest,HEMATOCRIT,HEMATOCRIT,Hematocrit,C
+LBTEST_labs_labtest,HEMOGLOBIN,HEMOGLOBIN,Hemoglobin,C
+LBTEST_labs_labtest,TOTAL PROT,TOTAL PROT,Protein,C
+LBTESTCD_labs_labtest,ALBUMIN,ALBUMIN,ALB,C
+LBTESTCD_labs_labtest,ALK. PHOS.,ALK. PHOS.,ALP,C
+LBTESTCD_labs_labtest,ALT (SGPT),ALT (SGPT),ALT,C
+LBTESTCD_labs_labtest,AST (SGOT),AST (SGOT),AST,C
+LBTESTCD_labs_labtest,DIRECT BILI,DIRECT BILI,BILDIR,C
+LBTESTCD_labs_labtest,TOTAL BILI,TOTAL BILI,BILI,C
+LBTESTCD_labs_labtest,GGTP,GGTP,GGT,C
+LBTESTCD_labs_labtest,HEMATOCRIT,HEMATOCRIT,HCT,C
+LBTESTCD_labs_labtest,HEMOGLOBIN,HEMOGLOBIN,HGB,C
+LBTESTCD_labs_labtest,TOTAL PROT,TOTAL PROT,PROT,C
+NY_adverse_serious,NO,NO,N,C
+RACE_demographic_race,2,2,BLACK OR AFRICAN AMERICAN,N
+RACE_demographic_race,3,3,OTHER,N
+RACE_demographic_race,1,1,WHITE,N
+SEX_demographic_gender,2,2,F,N
+SEX_demographic_gender,1,1,M,N
+SEX_demographic_gender,.,.,U,N
+UNIT_labs_colunits,%,%,%,C
+UNIT_labs_colunits,g/dL,g/dL,g/dL,C
+UNIT_labs_colunits,IU/L,IU/L,IU/L,C
+UNIT_labs_colunits,mg/dL,mg/dL,mg/dL,C
+VISIT_labs_month,0,0,Baseline,N
+VISIT_labs_month,1,1,3 Months,N
+VISIT_labs_month,2,2,6 Months,N

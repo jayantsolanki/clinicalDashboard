@@ -50,8 +50,11 @@ golem::remove_favicon()
 golem::use_favicon() # path = "path/to/ico". Can be an online file. 
 
 ## Add helper functions ----
-golem::use_utils_ui()
+#golem::use_utils_ui()
 golem::use_utils_server()
+
+# #other dependencies
+# usethis::use_package("shinipsum")
 
 # You're now set! ----
 

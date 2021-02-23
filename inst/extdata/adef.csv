@@ -1,0 +1,178 @@
+STUDYID,USUBJID,AGE,AGEGR1N,RANDDT,AGEGR1,SEX,SITEID,TRTPN,TRTP,PARAMCD,PARAM,COUNTRY,AVISIT,AVISITN,ABLFL,XPSEQ,VISITNUM,ADT,ADY,AVAL,AVALC,BASE,CHG,CRIT1FL,CRIT1,ITTFL
+XYZ123,UNI101,36,1,2010-04-02,<55 YEARS,M,100,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-04-02,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI101,36,1,2010-04-02,<55 YEARS,M,100,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-07-03,93,2,Moderate,3,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI101,36,1,2010-04-02,<55 YEARS,M,100,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-10-10,192,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI102,63,2,2010-02-13,>=55 YEARS,F,100,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-02-13,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI102,63,2,2010-02-13,>=55 YEARS,F,100,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-05-10,87,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI102,63,2,2010-02-13,>=55 YEARS,F,100,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-08-11,180,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI103,31,1,2010-05-16,<55 YEARS,M,100,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-05-15,-1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI103,31,1,2010-05-16,<55 YEARS,M,100,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-08-15,92,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI103,31,1,2010-05-16,<55 YEARS,M,100,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-11-15,184,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI104,37,1,2010-01-02,<55 YEARS,F,100,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-01-02,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI104,37,1,2010-01-02,<55 YEARS,F,100,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-04-03,92,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI104,37,1,2010-01-02,<55 YEARS,F,100,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-07-04,184,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI105,31,1,2010-04-20,<55 YEARS,M,100,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-04-20,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI105,31,1,2010-04-20,<55 YEARS,M,100,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-07-20,92,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI105,31,1,2010-04-20,<55 YEARS,M,100,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-10-19,183,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI106,32,1,2010-04-01,<55 YEARS,F,100,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-04-01,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI106,32,1,2010-04-01,<55 YEARS,F,100,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-07-05,96,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI106,32,1,2010-04-01,<55 YEARS,F,100,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-10-10,193,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI201,61,2,2010-06-11,>=55 YEARS,M,200,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-10,-1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI201,61,2,2010-06-11,>=55 YEARS,M,200,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-09-09,91,2,Moderate,3,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI201,61,2,2010-06-11,>=55 YEARS,M,200,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-12,185,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI202,43,1,2010-02-23,<55 YEARS,F,200,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-01-23,-31,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI202,43,1,2010-02-23,<55 YEARS,F,200,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-04-20,57,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI202,43,1,2010-02-23,<55 YEARS,F,200,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-07-20,148,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI203,39,1,2010-06-10,<55 YEARS,M,200,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-10,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI204,59,2,2010-02-03,>=55 YEARS,F,200,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-02-03,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI204,59,2,2010-02-03,>=55 YEARS,F,200,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-05-04,91,2,Moderate,3,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI204,59,2,2010-02-03,>=55 YEARS,F,200,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-08-05,184,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI205,31,1,2010-04-13,<55 YEARS,M,200,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-04-13,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI205,31,1,2010-04-13,<55 YEARS,M,200,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-07-12,91,2,Moderate,3,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI205,31,1,2010-04-13,<55 YEARS,M,200,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-10-10,181,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI206,62,2,2010-07-01,>=55 YEARS,F,200,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-07-01,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI206,62,2,2010-07-01,>=55 YEARS,F,200,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-10-01,93,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI206,62,2,2010-07-01,>=55 YEARS,F,200,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-28,181,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI301,68,2,2010-02-20,>=55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-02-20,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI301,68,2,2010-02-20,>=55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-05-19,89,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI301,68,2,2010-02-20,>=55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-08-22,184,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI302,31,1,2010-05-12,<55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-05-12,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI302,31,1,2010-05-12,<55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-08-13,94,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI302,31,1,2010-05-12,<55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-11-15,188,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI303,42,1,2010-02-19,<55 YEARS,M,300,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-02-19,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI303,42,1,2010-02-19,<55 YEARS,M,300,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-05-17,88,2,Moderate,3,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI303,42,1,2010-02-19,<55 YEARS,M,300,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-08-17,180,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI304,52,1,2010-05-19,<55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-05-19,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI304,52,1,2010-05-19,<55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-08-15,89,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI304,52,1,2010-05-19,<55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-11-20,186,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI305,44,1,2010-06-10,<55 YEARS,M,300,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-10,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI305,44,1,2010-06-10,<55 YEARS,M,300,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-09-09,92,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI305,44,1,2010-06-10,<55 YEARS,M,300,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-12,186,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI306,50,1,2010-05-23,<55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-05-23,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI306,50,1,2010-05-23,<55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-08-20,90,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI306,50,1,2010-05-23,<55 YEARS,M,300,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-11-19,181,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI401,39,1,2010-06-13,<55 YEARS,F,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-13,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI401,39,1,2010-06-13,<55 YEARS,F,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-09-11,91,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI401,39,1,2010-06-13,<55 YEARS,F,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-10,181,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI402,29,1,2010-01-02,<55 YEARS,F,400,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-01-02,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI402,29,1,2010-01-02,<55 YEARS,F,400,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-04-02,91,3,Severe,2,1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI402,29,1,2010-01-02,<55 YEARS,F,400,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-07-10,190,3,Severe,2,1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI403,36,1,2010-03-03,<55 YEARS,M,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-03-03,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI403,36,1,2010-03-03,<55 YEARS,M,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-06-04,94,3,Severe,2,1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI403,36,1,2010-03-03,<55 YEARS,M,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-09-05,187,1,Mild,2,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI404,56,2,2010-04-24,>=55 YEARS,M,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-04-23,-1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI404,56,2,2010-04-24,>=55 YEARS,M,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-07-24,92,3,Severe,2,1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI404,56,2,2010-04-24,>=55 YEARS,M,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-10-26,186,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI405,70,2,2010-03-01,>=55 YEARS,F,400,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-02-28,-1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI405,70,2,2010-03-01,>=55 YEARS,F,400,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-05-25,86,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI405,70,2,2010-03-01,>=55 YEARS,F,400,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-08-28,181,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI406,40,1,2010-06-12,<55 YEARS,M,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-12,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI406,40,1,2010-06-12,<55 YEARS,M,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-09-10,91,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI406,40,1,2010-06-12,<55 YEARS,M,400,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-09,181,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI501,31,1,2010-02-23,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-02-23,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI501,31,1,2010-02-23,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-05-20,87,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI501,31,1,2010-02-23,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-08-17,176,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI502,43,1,2010-05-28,<55 YEARS,F,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-05-27,-1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI502,43,1,2010-05-28,<55 YEARS,F,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-08-25,90,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI502,43,1,2010-05-28,<55 YEARS,F,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-11-20,177,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI503,47,1,2010-01-21,<55 YEARS,M,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-01-19,-2,1,Mild,1,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI503,47,1,2010-01-21,<55 YEARS,M,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-04-20,90,0,None,1,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI503,47,1,2010-01-21,<55 YEARS,M,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-07-19,180,0,None,1,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI504,33,1,2010-06-19,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-19,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI504,33,1,2010-06-19,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-09-20,94,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI504,33,1,2010-06-19,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-20,185,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI505,40,1,2010-03-13,<55 YEARS,M,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-03-12,-1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI505,40,1,2010-03-13,<55 YEARS,M,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-06-15,95,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI506,45,1,2010-01-20,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-01-20,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI506,45,1,2010-01-20,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-04-19,90,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI506,45,1,2010-01-20,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-07-20,182,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI507,33,1,2010-04-06,<55 YEARS,M,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-04-06,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI507,33,1,2010-04-06,<55 YEARS,M,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-07-03,89,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI507,33,1,2010-04-06,<55 YEARS,M,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-10-06,184,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI508,44,1,2010-02-04,<55 YEARS,F,500,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-02-03,-1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI508,44,1,2010-02-04,<55 YEARS,F,500,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-05-09,95,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI508,44,1,2010-02-04,<55 YEARS,F,500,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-08-11,189,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI509,37,1,2010-05-16,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-05-15,-1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI509,37,1,2010-05-16,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-08-15,92,2,Moderate,3,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI509,37,1,2010-05-16,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-11-15,184,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI510,53,1,2010-01-12,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-01-12,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI510,53,1,2010-01-12,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-04-13,92,1,Mild,2,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI510,53,1,2010-01-12,<55 YEARS,M,500,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-07-14,184,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI511,49,1,2010-04-10,<55 YEARS,F,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-04-10,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI511,49,1,2010-04-10,<55 YEARS,F,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-07-10,92,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI511,49,1,2010-04-10,<55 YEARS,F,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-10-13,187,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI512,43,1,2010-04-03,<55 YEARS,M,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-04-01,-2,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI512,43,1,2010-04-03,<55 YEARS,M,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-07-01,90,2,Moderate,3,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI512,43,1,2010-04-03,<55 YEARS,M,500,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-10-01,182,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI601,49,1,2010-06-04,<55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-03,-1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI601,49,1,2010-06-04,<55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-09-09,98,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI601,49,1,2010-06-04,<55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-09,189,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI602,38,1,2010-02-28,<55 YEARS,F,600,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-02-28,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI602,38,1,2010-02-28,<55 YEARS,F,600,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-03-25,26,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI602,38,1,2010-02-28,<55 YEARS,F,600,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-06-23,116,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI603,29,1,2010-01-12,<55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-01-12,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI603,29,1,2010-01-12,<55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-04-12,91,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI603,29,1,2010-01-12,<55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-07-10,180,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI604,32,1,2010-03-13,<55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-03-13,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI604,32,1,2010-03-13,<55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-06-14,94,1,Mild,2,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI604,32,1,2010-03-13,<55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-09-15,187,1,Mild,2,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI605,54,1,2010-04-23,<55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-04-23,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI605,54,1,2010-04-23,<55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-07-24,93,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI605,54,1,2010-04-23,<55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-10-26,187,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI606,38,1,2010-02-22,<55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-02-22,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI606,38,1,2010-02-22,<55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-05-25,93,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI606,38,1,2010-02-22,<55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-08-23,183,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI607,43,1,2010-06-10,<55 YEARS,M,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-10,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI607,43,1,2010-06-10,<55 YEARS,M,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-09-10,93,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI607,43,1,2010-06-10,<55 YEARS,M,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-09,183,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI608,42,1,2010-02-20,<55 YEARS,F,600,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-02-20,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI608,42,1,2010-02-20,<55 YEARS,F,600,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-05-20,90,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI608,42,1,2010-02-20,<55 YEARS,F,600,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-08-17,179,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI609,64,2,2010-05-22,>=55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-05-22,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI609,64,2,2010-05-22,>=55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-08-25,96,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI609,64,2,2010-05-22,>=55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-11-23,186,2,Moderate,3,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI610,55,2,2010-01-09,>=55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-01-09,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI610,55,2,2010-01-09,>=55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-04-10,92,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI610,55,2,2010-01-09,>=55 YEARS,M,600,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-07-12,185,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI611,60,2,2010-06-19,>=55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-19,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI611,60,2,2010-06-19,>=55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-09-21,95,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI611,60,2,2010-06-19,>=55 YEARS,F,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-20,185,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI612,50,1,2010-03-12,<55 YEARS,M,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-03-12,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI612,50,1,2010-03-12,<55 YEARS,M,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-06-15,96,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI612,50,1,2010-03-12,<55 YEARS,M,600,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-09-16,189,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI701,58,2,2010-05-12,>=55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-05-12,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI701,58,2,2010-05-12,>=55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-08-10,91,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI701,58,2,2010-05-12,>=55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-11-10,183,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI702,55,2,2010-02-10,>=55 YEARS,M,700,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-02-09,-1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI702,55,2,2010-02-10,>=55 YEARS,M,700,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-05-10,90,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI702,55,2,2010-02-10,>=55 YEARS,M,700,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-08-12,184,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI703,54,1,2010-05-20,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-05-19,-1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI703,54,1,2010-05-20,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-08-20,93,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI703,54,1,2010-05-20,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-11-20,185,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI704,37,1,2010-06-01,<55 YEARS,F,700,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-01,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI704,37,1,2010-06-01,<55 YEARS,F,700,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-09-09,101,3,Severe,2,1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI704,37,1,2010-06-01,<55 YEARS,F,700,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-10,193,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI705,28,1,2010-05-24,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-05-20,-4,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI705,28,1,2010-05-24,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-08-20,89,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI705,28,1,2010-05-24,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-11-19,180,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI706,44,1,2010-06-12,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-12,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI706,44,1,2010-06-12,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-09-11,92,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI706,44,1,2010-06-12,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-10,182,2,Moderate,3,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI707,37,1,2010-01-12,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-01-12,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI707,37,1,2010-01-12,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-04-12,91,1,Mild,2,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI707,37,1,2010-01-12,<55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-07-10,180,1,Mild,2,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI708,31,1,2010-03-13,<55 YEARS,F,700,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-03-13,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI708,31,1,2010-03-13,<55 YEARS,F,700,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-06-14,94,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI708,31,1,2010-03-13,<55 YEARS,F,700,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-09-15,187,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI709,69,2,2010-04-23,>=55 YEARS,F,700,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-04-23,1,3,Severe,3,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI709,69,2,2010-04-23,>=55 YEARS,F,700,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-07-24,93,1,Mild,3,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI709,69,2,2010-04-23,>=55 YEARS,F,700,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-10-23,184,0,None,3,-3,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI710,60,2,2010-03-16,>=55 YEARS,M,700,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-03-16,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI710,60,2,2010-03-16,>=55 YEARS,M,700,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-06-16,93,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI710,60,2,2010-03-16,>=55 YEARS,M,700,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-09-16,185,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI711,59,2,2010-04-24,>=55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-04-22,-2,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI711,59,2,2010-04-24,>=55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-07-22,90,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI711,59,2,2010-04-24,>=55 YEARS,M,700,1,Analgezia HCL 30 mg,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-09-20,150,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI712,61,2,2010-06-10,>=55 YEARS,.,700,0,Placebo,XPPAIN,Pain Score,USA,Baseline,0,Y,1,0,2010-06-10,1,2,Moderate,2,0,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI712,61,2,2010-06-10,>=55 YEARS,.,700,0,Placebo,XPPAIN,Pain Score,USA,3 Months,3,,2,1,2010-09-09,92,1,Mild,2,-1,N,Pain improvement from baseline of at least 2 points,Y
+XYZ123,UNI712,61,2,2010-06-10,>=55 YEARS,.,700,0,Placebo,XPPAIN,Pain Score,USA,6 Months,6,,3,2,2010-12-09,183,0,None,2,-2,Y,Pain improvement from baseline of at least 2 points,Y

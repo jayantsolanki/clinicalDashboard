@@ -1,0 +1,16 @@
+.main-header .logo {
+  /**font-family: "Georgia", Times, "Times New Roman", serif;**/
+  font-weight: bold;
+  /*font-size: 12px;
+  /*width: 300px;*/
+}
+/*.main-sidebar{
+  width:300px;
+}*/
+
+#shiny-notification-panel{
+   position:fixed;
+   top: calc(50% - 150px);
+   left: calc(50% - 150px);
+   width:300px;
+}
