@@ -25,6 +25,14 @@ And the development version from [GitHub](https://github.com/) with:
 devtools::install_github("jayantsolanki/clinicalDashboard")
 ```
 
+Alt-installation and running app:
+
+``` r
+remotes::install_local()
+```
+
+Then run the code in run\_dev.R
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
@@ -55,13 +63,6 @@ up-to-date.
 You can also embed plots, for example:
 
 <img src="man/figures/README-pressure-1.png" width="100%" />
-Alt-installation and running app:
-
-``` r
-remotes::install_local()
-```
-
-Then run the code in run\_dev.R
 
 In that case, don’t forget to commit and push the resulting figure
 files, so they display on GitHub\!

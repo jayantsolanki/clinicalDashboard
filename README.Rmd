@@ -34,6 +34,14 @@ And the development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("jayantsolanki/clinicalDashboard")
 ```
+
+Alt-installation and running app:
+``` r
+remotes::install_local()
+```
+Then run the code in run_dev.R
+
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
@@ -56,11 +64,6 @@ You can also embed plots, for example:
 ```{r pressure, echo = FALSE}
 plot(pressure)
 ```
-Alt-installation and running app:
-``` r
-remotes::install_local()
-```
-Then run the code in run_dev.R
 
 
 
