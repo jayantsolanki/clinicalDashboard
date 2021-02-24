@@ -14,3 +14,7 @@
    left: calc(50% - 150px);
    width:300px;
 }
+
+.control-sidebar-heading {
+display: none; /* for removing unnecessary padding*/
+}

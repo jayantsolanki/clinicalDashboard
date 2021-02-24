@@ -7,10 +7,26 @@
 #' @noRd 
 #'
 #' @importFrom shiny NS tagList 
+#' @import shinydashboard 
 mod_adverse_events_ui <- function(id){
   ns <- NS(id)
   tagList(
- 
+    fluidRow(
+      tabBox(
+        title = "First tabBox",
+        # The id lets us use input$tabset1 on the server to find the current tab
+        id = "tabset1", height = "250px",
+        tabPanel("Tab1", "First tab content"),
+        tabPanel("Tab2", "Tab content 2")
+      ),
+      tabBox(
+        side = "right", height = "250px",
+        selected = "Tab1",
+        tabPanel("Tab1", "Tab content 1"),
+        tabPanel("Tab2", "Tab content 2"),
+        tabPanel("Tab3", "Note that when side=right, the tab order is reversed.")
+      )
+    )
   )
 }
     

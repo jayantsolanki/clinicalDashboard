@@ -14,7 +14,7 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # List the first level UI elements here
     shinydashboardPlus::dashboardPagePlus(
-      skin = "green", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
+      skin = "green-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
       header = shinydashboardPlus::dashboardHeaderPlus(
         title = "Clinical Data Monitoring Dashboard",
         enable_rightsidebar = TRUE,
@@ -26,37 +26,54 @@ app_ui <- function(request) {
           # Setting id makes input$tabs give the tabName of currently-selected tab
           id = "tabs",
           shinydashboard::menuItem("Enrollment", icon = icon("chart-pie"), tabName = "enrollments"),
-          shinydashboard::menuItem("Adverse Events", icon = icon("notes-medical"), tabName = "adverseEvents"),
-          shinydashboard::menuItem("Vitals and Labs", icon = icon("heartbeat"), tabName = "vitalsLabs"),
-          shinydashboard::menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
-          shinydashboard::menuItem("Muscle Group View", icon = icon("th"), tabName = "mg"),
-          shinydashboard::menuItem("Exercise View", icon = icon("bar-chart-o"), tabName = "ev"
-          ))
+          shinydashboard::menuItem(
+            "Adverse Events", 
+            icon = icon("notes-medical"), 
+            tabName = NULL,
+            shinydashboard::menuSubItem("Adverse Event Overview", tabName = "ae_overview"),
+            shinydashboard::menuSubItem("Adverse Event Figures", tabName = "ae_figures"),
+            shinydashboard::menuSubItem("Adverse Event Listings", tabName = "ae_listings")
+          ),
+          shinydashboard::menuItem("Vitals and Labs", icon = icon("heartbeat"), tabName = "vitalsLabs")
+          # shinydashboard::menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
+          # shinydashboard::menuItem("Muscle Group View", icon = icon("th"), tabName = "mg"),
+          # shinydashboard::menuItem("Exercise View", icon = icon("bar-chart-o"), tabName = "ev")
+        )
       ),
       # Show the appropriate tab's content in the main body of our dashboard when we select it
       body = shinydashboard::dashboardBody(
         shinydashboard::tabItems(
           shinydashboard::tabItem("enrollments", mod_enrollments_ui("enrollments_ui_1")),
-          shinydashboard::tabItem("adverseEvents", mod_adverse_events_ui("adverse_events_ui_1")),
-          shinydashboard::tabItem("vitalsLabs", mod_vitals_labs_ui("vitals_labs_ui_1")),
-          shinydashboard::tabItem("dashboard", mod_Home_ui("Home_ui_1")),
-          shinydashboard::tabItem("mg", mod_MuscleGroup_ui("MuscleGroup_ui_1")),
-          shinydashboard::tabItem("ev", mod_Exercises_ui("Exercises_ui_1")
-          )
+          shinydashboard::tabItem("ae_overview", mod_ae_overview_ui("ae_overview_ui_1")),
+          shinydashboard::tabItem("ae_figures", mod_ae_figures_ui("ae_figures_ui_1")),
+          shinydashboard::tabItem("ae_listings",mod_ae_listing_ui("ae_listing_ui_1")),
+          shinydashboard::tabItem("vitalsLabs", mod_vitals_labs_ui("vitals_labs_ui_1"))
+          # shinydashboard::tabItem("dashboard", mod_Home_ui("Home_ui_1")),
+          # shinydashboard::tabItem("mg", mod_MuscleGroup_ui("MuscleGroup_ui_1")),
+          # shinydashboard::tabItem("ev", mod_Exercises_ui("Exercises_ui_1"))
         ) 
       ),
       rightsidebar = shinydashboardPlus::rightSidebar(
-        # shinydashboardPlus::rightSidebarTabContent(
-        #   id = 1,
-        #   title = "Tab 1",
-        #   icon = "desktop",
-        #   active = TRUE,
-        #   sliderInput(
-        #     "obs",
-        #     "Number of observations:",
-        #     min = 0, max = 1000, value = 500
+        # conditionalPanel(
+        #   condition = "input.tabs == 'ae_overview' | input.tabs == 'ae_figures' | input.tabs == 'ae_listings'",
+        #   # mod_ae_filters_ui("ae_filters_ui_1")
+        #   shinydashboardPlus::rightSidebarTabContent(
+        #     id = "ae_filters",
+        #     icon = "desktop",
+        #     background="white",
+        #     mod_ae_filters_ui("ae_filters_ui_1")
         #   )
-        # ),
+        # )
+        shinydashboardPlus::rightSidebarTabContent(
+          id = 1,
+          # title = "Filters",
+          icon = "sliders-h",
+          active = TRUE,
+          conditionalPanel(
+            condition = "input.tabs == 'ae_overview' | input.tabs == 'ae_figures' | input.tabs == 'ae_listings'",
+            mod_ae_filters_ui("ae_filters_ui_1")
+          )
+        ),
         # shinydashboardPlus::rightSidebarTabContent(
         #   id = 2,
         #   title = "Tab 2",
@@ -68,8 +85,9 @@ app_ui <- function(request) {
         #   title = "Tab 3",
         #   numericInput("obs", "Observations:", 10, min = 1, max = 100)
         # )
-      ),
-      title = "Clinical Data Monitoring Dashboard"
+        background = "white"
+        ),
+      title = "Clinical Data Monitoring Dashboard",
     )
 
   )

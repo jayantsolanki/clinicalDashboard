@@ -40,7 +40,11 @@ golem::add_css_file( "custom" )
 
 # custom
 golem::add_module( name = "enrollments" )
-golem::add_module( name = "adverse_events" )
+# golem::add_module( name = "adverse_events" )
+golem::add_module( name = "ae_overview" )
+golem::add_module( name = "ae_listing" )
+golem::add_module( name = "ae_figures" )
+golem::add_module( name = "ae_filters" )
 golem::add_module( name = "vitals_labs" )
 
 #####################

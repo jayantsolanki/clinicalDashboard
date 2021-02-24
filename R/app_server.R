@@ -18,7 +18,13 @@ app_server <- function( input, output, session ) {
     }
     # List the first level callModules here
     callModule(mod_enrollments_server, "enrollments_ui_1")
-    callModule(mod_adverse_events_server, "adverse_events_ui_1")
+    
+    # callModule(mod_adverse_events_server, "adverse_events_ui_1")
+    callModule(mod_ae_overview_server, "ae_overview_ui_1")
+    callModule(mod_ae_figures_server, "ae_figures_ui_1")
+    callModule(mod_ae_listing_server, "ae_listing_ui_1")
+    callModule(mod_ae_filters_server, "ae_filters_ui_1")
+    
     callModule(mod_vitals_labs_server, "vitals_labs_ui_1")
     callModule(mod_Home_server, "Home_ui_1")
     callModule(mod_MuscleGroup_server, "MuscleGroup_ui_1")

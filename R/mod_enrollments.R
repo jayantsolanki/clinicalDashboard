@@ -10,12 +10,38 @@
 mod_enrollments_ui <- function(id){
   ns <- NS(id)
   tagList(
-    fluidPage(
-      fluidRow(
-        column(
-          width = 10,
-          DT::dataTableOutput(ns("dt"))
-        )
+    fluidRow(
+      shinydashboard::box(title = "Box title", "Box content"),
+      shinydashboard::box(status = "warning", "Box content")
+    ),
+    
+    fluidRow(
+      shinydashboard::box(
+        title = "Title 1", width = 4, solidHeader = TRUE, status = "primary",
+        "Box content"
+      ),
+      shinydashboard::box(
+        title = "Title 2", width = 4, solidHeader = TRUE,
+        "Box content"
+      ),
+      shinydashboard::box(
+        title = "Title 1", width = 4, solidHeader = TRUE, status = "warning",
+        "Box content"
+      )
+    ),
+    
+    fluidRow(
+      shinydashboard::box(
+        width = 4, background = "black",
+        "A box with a solid black background"
+      ),
+      shinydashboard::box(
+        title = "Title 5", width = 4, background = "light-blue",
+        "A box with a solid light-blue background"
+      ),
+      shinydashboard::box(
+        title = "Title 6",width = 4, background = "maroon",
+        "A box with a solid maroon background"
       )
     )
   )
@@ -26,10 +52,7 @@ mod_enrollments_ui <- function(id){
 #' @noRd 
 mod_enrollments_server <- function(input, output, session){
   ns <- session$ns
-  print(nrow(session$userData$adae))
-  output$dt <- DT::renderDataTable({
-    DT::datatable(session$userData$adae, filter = "top")
-  })
+
 }
     
 ## To be copied in the UI
