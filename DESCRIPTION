@@ -17,7 +17,9 @@ Imports:
     shinydashboard,
     shinydashboardPlus,
     ggplot2,
-    pkgload
+    pkgload,
+    dplyr,
+    shinyjs
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.0

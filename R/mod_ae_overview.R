@@ -1,9 +1,9 @@
 #' ae_overview UI Function
 #'
-#' @description A shiny Module.
+#' @description A shiny Module for plotting Summary level information on the Adverse Events
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
-#'
+#' @param dataset data frame (reactive) with variables necessary for adae overview
 #' @noRd 
 #'
 #' @importFrom shiny NS tagList 
@@ -35,7 +35,7 @@ mod_ae_overview_ui <- function(id){
 #' ae_overview Server Function
 #'
 #' @noRd 
-mod_ae_overview_server <- function(input, output, session){
+mod_ae_overview_server <- function(input, output, session, dataset){
   ns <- session$ns
   output$plot2 <- renderPlot({
     shinipsum::random_ggplot(type = "line")
