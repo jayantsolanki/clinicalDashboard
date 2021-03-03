@@ -41,10 +41,12 @@ mod_ae_overview_server <- function(input, output, session, dataset){
   # for SOC
   
   output$plot2 <- renderPlotly({
+    req(dataset())
     ggplot(dataset(), aes( x = reorder(AEBODSYS,AEBODSYS,length), fill = TRTA )) + geom_bar() + coord_flip()
   })
   
   output$plot3 <- renderPlotly({
+    req(dataset())
     # shinipsum::random_ggplot(type = "line")
     ggplot(dataset(), aes( x = reorder(AEDECOD,AEDECOD,length), fill = TRTA )) + geom_bar() + coord_flip()
   })

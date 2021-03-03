@@ -24,7 +24,7 @@ app_ui <- function(request) {
       sidebar = shinydashboard::dashboardSidebar(
         shinydashboard::sidebarMenu(
           # Setting id makes input$tabs give the tabName of currently-selected tab
-          id = "tabs",
+          id = "tabs",#use this to access your tab ids
           shinydashboard::menuItem("Enrollment", icon = icon("chart-pie"), tabName = "enrollments"),
           shinydashboard::menuItem(
             "Adverse Events", 

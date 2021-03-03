@@ -119,7 +119,11 @@ mod_ae_filters_server <- function(input, output, session, parent_session){
   })
   
   # apply filters
-  adae_final <- eventReactive(input$apply, {
+  adae_final <- eventReactive(
+    c(
+      input$apply,
+      parent_session$input$tabs
+    ), {
     if(!is.null(input$usubjid)){
       if("All" %in% input$usubjid){
         filteredData <- adae_usubjid()
