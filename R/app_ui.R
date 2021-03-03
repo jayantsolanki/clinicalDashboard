@@ -73,6 +73,10 @@ app_ui <- function(request) {
           conditionalPanel(
             condition = "input.tabs == 'ae_overview' | input.tabs == 'ae_figures' | input.tabs == 'ae_listings'",
             mod_ae_filters_ui("ae_filters_ui_1")
+          ),
+          conditionalPanel(
+            condition = "input.tabs == 'enrollments'",
+            mod_enrollments_filters_ui("enrollments_filters_ui_1")
           )
         ),
         # shinydashboardPlus::rightSidebarTabContent(
