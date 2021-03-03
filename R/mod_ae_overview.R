@@ -7,25 +7,25 @@
 #' @noRd 
 #'
 #' @importFrom shiny NS tagList 
-#' @import shinydashboard
+#' @import shinydashboard plotly dplyr ggplot2
 mod_ae_overview_ui <- function(id){
   ns <- NS(id)
   tagList(
     fluidRow(
       column(
-        width = 6,
-        shinydashboard::box(
-          width = NULL,
-          title = "Total Weight Per Workout",
-          plotOutput(ns("plot2"))
-        )
-      ),
-      column(
-        width = 6,
-        shinydashboard::box(
-          width = NULL,
-          title = "Max Weight Per Workout",
-          plotOutput(ns("plot3"))
+        width = 12,
+        tabBox(
+          title = "AE Overview",
+          # The id lets us use input$tabset1 on the server to find the current tab
+          id = "aeOverviewTab", 
+          # height = "250px",
+          width = 12,
+          tabPanel("AE by SOC",
+                   "AE distribution by SOC",
+                   plotlyOutput(ns("plot2"))),
+          tabPanel("AE by PT",
+                   "AE distribution by PT",
+                   plotlyOutput(ns("plot3")))
         )
       )
     )
@@ -37,12 +37,16 @@ mod_ae_overview_ui <- function(id){
 #' @noRd 
 mod_ae_overview_server <- function(input, output, session, dataset){
   ns <- session$ns
-  output$plot2 <- renderPlot({
-    shinipsum::random_ggplot(type = "line")
+  
+  # for SOC
+  
+  output$plot2 <- renderPlotly({
+    ggplot(dataset(), aes( x = reorder(AEBODSYS,AEBODSYS,length), fill = TRTA )) + geom_bar() + coord_flip()
   })
   
-  output$plot3 <- renderPlot({
-    shinipsum::random_ggplot(type = "bar")
+  output$plot3 <- renderPlotly({
+    # shinipsum::random_ggplot(type = "line")
+    ggplot(dataset(), aes( x = reorder(AEDECOD,AEDECOD,length), fill = TRTA )) + geom_bar() + coord_flip()
   })
  
 }

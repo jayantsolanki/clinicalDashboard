@@ -2,7 +2,7 @@
 #' 
 #' @param request Internal parameter for `{shiny}`. 
 #'     DO NOT REMOVE.
-#' @import shiny
+#' @import shiny shinyjs
 #' @noRd
 app_ui <- function(request) {
   mod_Home_ui("Home_ui_1")
@@ -42,6 +42,7 @@ app_ui <- function(request) {
       ),
       # Show the appropriate tab's content in the main body of our dashboard when we select it
       body = shinydashboard::dashboardBody(
+        shinyjs::useShinyjs(), # calling shinyjs
         shinydashboard::tabItems(
           shinydashboard::tabItem("enrollments", mod_enrollments_ui("enrollments_ui_1")),
           shinydashboard::tabItem("ae_overview", mod_ae_overview_ui("ae_overview_ui_1")),
@@ -87,7 +88,7 @@ app_ui <- function(request) {
         # )
         background = "white"
         ),
-      title = "Clinical Data Monitoring Dashboard",
+      title = "Clinical Data Monitoring Dashboard"
     )
 
   )

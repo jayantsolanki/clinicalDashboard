@@ -18,6 +18,7 @@
 # usethis::use_package( "thinkr" )
 usethis::use_package( "dplyr" )
 usethis::use_package( "shinyjs" )
+usethis::use_package( "plotly" )
 # ## Add modules ----
 # ## Create a module infrastructure in R/
 # golem::add_module( name = "name_of_module1" ) # Name of the module

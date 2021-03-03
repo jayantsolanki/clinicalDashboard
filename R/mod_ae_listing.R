@@ -17,8 +17,8 @@ mod_ae_listing_ui <- function(id){
           width = NULL,
           title = "Adverse Event Listing",
           DT::dataTableOutput(
-            ns("aeListing"),
-            width=400)
+            ns("aeListing")
+          )
         )
       )
     )
@@ -31,8 +31,10 @@ mod_ae_listing_ui <- function(id){
 mod_ae_listing_server <- function(input, output, session, dataset){
   ns <- session$ns
   output$aeListing = DT::renderDataTable({
-    dataset(),
-    options = list(scrollX = TRUE)
+    DT::datatable(
+      dataset(), 
+      selection = 'single',
+      options = list(scrollX = TRUE))
   })
 }
     

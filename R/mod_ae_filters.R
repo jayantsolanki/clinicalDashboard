@@ -33,10 +33,9 @@ mod_ae_filters_ui <- function(id){
 #' ae_filters Server Function
 #'
 #' @noRd 
-mod_ae_filters_server <- function(input, output, session){
+mod_ae_filters_server <- function(input, output, session, parent_session){
   ns <- session$ns
   adae <- session$userData$adae
-  print(head(adae))
   
   # generating intermediate data for filters
   # ae_data <- reactiveValues(adae = adae)
@@ -119,7 +118,7 @@ mod_ae_filters_server <- function(input, output, session){
     }
   })
   
-
+  # apply filters
   adae_final <- eventReactive(input$apply, {
     if(!is.null(input$usubjid)){
       if("All" %in% input$usubjid){
@@ -136,18 +135,31 @@ mod_ae_filters_server <- function(input, output, session){
     }
   })
 
-  # apply filters
-  # observeEvent(input$apply,{
-  #   print("Button Clicked")
-  #   print(nrow(adae_final()))
-  # })
+
+  observeEvent(parent_session$input$tabs,{
+    # if(parent_session$input$tabs == "ae_overview" | parent_session$input.tabs == "ae_figures" | parent_session$input.tabs == "ae_listings"){
+    #   print("Running code for Adverse Events")
+    #   # click(ns("apply"))
+    # }
+    if(parent_session$input$tabs == "ae_overview" | parent_session$input$tabs == "ae_figures" | parent_session$input$tabs == "ae_listings"){
+      print(parent_session$input$tabs)
+      shinyjs::click("apply")
+      # alert("Hola it worked")
+      # toggle("hello")
+      # click(session$ns("reset"))
+      # shinyjs::toggle("ae_filters_ui_1-apply")
+      # click("ae_filters_ui_1-apply")
+    }
+    
+  })
   # reset filters
   observeEvent(input$reset,{
+    print("reset clicked")
     ae_data$adae <- NULL
     ae_data$adae <- adae
 
   })
-  
+
   # rendering filter values
   output$siteId <- renderUI({
     if(!is.null(ae_data$adae)){
