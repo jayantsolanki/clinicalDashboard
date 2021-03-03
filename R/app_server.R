@@ -18,6 +18,7 @@ app_server <- function( input, output, session ) {
     }
     withProgress(message = 'Loading Filters', value = 0, {
       incProgress(0/9, detail = paste("Loading Enrollment filters", 1))
+      callModule(mod_enrollments_filters_server, "enrollments_filters_ui_1")
       callModule(mod_enrollments_server, "enrollments_ui_1")
       incProgress(1/9, detail = paste("Loading Adverse Event filters", 2))
       adae_datasets <- callModule(mod_ae_filters_server, "ae_filters_ui_1", parent_session = session)
@@ -47,17 +48,9 @@ app_server <- function( input, output, session ) {
     # callModule(mod_enrollments_server, "enrollments_ui_1")
     
     # callModule(mod_adverse_events_server, "adverse_events_ui_1")
-    # adae_datasets <- callModule(mod_ae_filters_server, "ae_filters_ui_1", parent_session = session)
-    # callModule(mod_ae_overview_server, "ae_overview_ui_1", adae_datasets)
-    # callModule(mod_ae_figures_server, "ae_figures_ui_1")
-    # callModule(mod_ae_listing_server, "ae_listing_ui_1", adae_datasets)
-    # 
-    # 
-    # callModule(mod_vitals_labs_server, "vitals_labs_ui_1")
-    # callModule(mod_Home_server, "Home_ui_1")
-    # callModule(mod_MuscleGroup_server, "MuscleGroup_ui_1")
-    # callModule(mod_Exercises_server, "Exercises_ui_1")
-    # 
+
+    
+
   }
   else{ # stop going ahead with application
     showNotification(

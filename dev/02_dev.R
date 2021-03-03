@@ -19,6 +19,7 @@
 usethis::use_package( "dplyr" )
 usethis::use_package( "shinyjs" )
 usethis::use_package( "plotly" )
+usethis::use_package( "readxl" )
 # ## Add modules ----
 # ## Create a module infrastructure in R/
 # golem::add_module( name = "name_of_module1" ) # Name of the module
@@ -48,6 +49,7 @@ golem::add_module( name = "ae_listing" )
 golem::add_module( name = "ae_figures" )
 golem::add_module( name = "ae_filters" )
 golem::add_module( name = "vitals_labs" )
+golem::add_module( name = "enrollments_filters" )
 
 #####################
 
