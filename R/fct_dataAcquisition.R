@@ -1,3 +1,4 @@
+#' @import readxl
 trial_data <- function(
   session = getDefaultReactiveDomain()
 ){
