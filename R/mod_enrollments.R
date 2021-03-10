@@ -7,52 +7,57 @@
 #' @noRd 
 #'
 #' @importFrom shiny NS tagList 
+#' @import DT
 mod_enrollments_ui <- function(id){
   ns <- NS(id)
   tagList(
     fluidRow(
-      shinydashboard::box(title = "Box title", "Box content"),
-      shinydashboard::box(status = "warning", "Box content")
-    ),
-    
-    fluidRow(
-      shinydashboard::box(
-        title = "Title 1", width = 4, solidHeader = TRUE, status = "primary",
-        "Box content"
-      ),
-      shinydashboard::box(
-        title = "Title 2", width = 4, solidHeader = TRUE,
-        "Box content"
-      ),
-      shinydashboard::box(
-        title = "Title 1", width = 4, solidHeader = TRUE, status = "warning",
-        "Box content"
-      )
-    ),
-    
-    fluidRow(
-      shinydashboard::box(
-        width = 4, background = "black",
-        "A box with a solid black background"
-      ),
-      shinydashboard::box(
-        title = "Title 5", width = 4, background = "light-blue",
-        "A box with a solid light-blue background"
-      ),
-      shinydashboard::box(
-        title = "Title 6",width = 4, background = "maroon",
-        "A box with a solid maroon background"
-      )
+      shinydashboard::box(title = "Box title", "Box content"),plotlyOutput(ns("lchart"))
     )
+    
+    # ,fluidRow(
+    #   shinydashboard::box(
+    #     title = "Title 1", width = 4, solidHeader = TRUE, status = "primary",
+    #     "Box content"
+    #   ),
+    #   shinydashboard::box(
+    #     title = "Title 2", width = 4, solidHeader = TRUE,
+    #     "Box content"
+    #   ),
+    #   shinydashboard::box(
+    #     title = "Title 1", width = 4, solidHeader = TRUE, status = "warning",
+    #     "Box content"
+    #   )
+    # ),
+    
+    # fluidRow(
+    #   shinydashboard::box(
+    #     width = 4, background = "black",
+    #     "A box with a solid black background"
+    #   ),
+    #   shinydashboard::box(
+    #     title = "Title 5", width = 4, background = "light-blue",
+    #     "A box with a solid light-blue background"
+    #   ),
+    #   shinydashboard::box(
+    #     title = "Title 6",width = 4, background = "maroon",
+    #     "A box with a solid maroon background"
+    #   )
+    # )
   )
 }
     
 #' enrollments Server Function
 #'
 #' @noRd 
-mod_enrollments_server <- function(input, output, session){
+mod_enrollments_server <- function(input, output, session, dataset){
   ns <- session$ns
 
+   output$lchart <- renderPlotly({
+     # req(dataset())
+     as.data.frame(dataset()) %>% group_by(Month) %>% summarise(Screened_sum=sum(total_screened)) %>%
+     plot_ly(x=~Month, y=~Screened_sum, type="scatter", mode="lines+markers")
+   })
 }
     
 ## To be copied in the UI

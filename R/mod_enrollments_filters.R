@@ -18,7 +18,10 @@ mod_enrollments_filters_ui <- function(id){
     , uiOutput(ns("gen"))
     , uiOutput(ns("trea"))
     , uiOutput(ns("site"))
-    , uiOutput(ns("proceed"))
+    , hr()
+    , uiOutput(ns("enrol_apply"))
+    , br()
+    , uiOutput(ns("enrol_reset"))
     # , actionButton(ns("proceed"),"Proceed")
   )
 }
@@ -26,7 +29,7 @@ mod_enrollments_filters_ui <- function(id){
 #' enrollments_filters Server Function
 #'
 #' @noRd 
-mod_enrollments_filters_server <- function(input, output, session){
+mod_enrollments_filters_server <- function(input, output, session, parent_session){
   ns <- session$ns
   raw_data <- session$userData$enrol_groupby
   
@@ -186,8 +189,8 @@ mod_enrollments_filters_server <- function(input, output, session){
     )
   })
 
-  #Step 8 : Based on Treatment filter, the data should be filtered. This data is taken as raw data to come up with Site ID filter
-  enrol_final <- reactive({
+  #Step 10 : Based on Treatment filter, the data should be filtered. This data is taken as raw data to come up with Site ID filter
+  enrol_final <- eventReactive(input$en_apply,{
     if(!is.null(input$site)){
       if("All" %in% input$site){
         filteredData <- enrol_site()
@@ -195,29 +198,42 @@ mod_enrollments_filters_server <- function(input, output, session){
       else{
         filteredData <- enrol_site()%>% filter(`Site ID` %in% input$site)
       }
+      return(filteredData)
     }
     else{
       return (NULL)
     }
   })
   
-  
-  
-  observe({
-    # print(enrol_country())
-    # print(enrol_gender())
-    # print(enrol_treatment())
-    print(enrol_final())
+  # Step 11 : Apply button
+  output$enrol_apply <- renderUI({
+    actionButton(
+      inputId = ns("en_apply"),
+      label = "Apply",
+      icon = icon("sync"), 
+      width = NULL)
   })
   
-  filter_values <- reactiveValues(selected_countries = NULL, selected_t_area = NULL,
-                                  selected_site = NULL, selected_gen = NULL)
   
+  #Step 12 : Reset Button
+  output$enrol_reset <- renderUI({
+    actionButton(
+      inputId = ns("en_reset"),
+      label = "Clear",
+      icon = icon("window-close"), 
+      width = NULL)
+  })
   
-  choice_values <- reactiveValues(choice_countries = unique(raw_data$Country),
-                                  choice_treatment = unique(raw_data$`Treatment Arm`),
-                                  choice_site = unique(raw_data$`Site ID`),
-                                  choice_gender = unique(raw_data$Gender))
+  # reset filters
+  observeEvent(input$en_reset,{
+    print("Clined in enroll")
+    # values_to_display$enrol_data <- NULL
+    values_to_display$enrol_data <- raw_data
+    # enrol_final <- raw_data
+    print(nrow(values_to_display$enrol_data))
+  })
+  
+  return(enrol_final)
   
 }
     
