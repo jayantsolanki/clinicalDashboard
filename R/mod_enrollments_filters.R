@@ -193,10 +193,10 @@ mod_enrollments_filters_server <- function(input, output, session, parent_sessio
   enrol_final <- eventReactive(input$en_apply,{
     if(!is.null(input$site)){
       if("All" %in% input$site){
-        filteredData <- enrol_site()
+        filteredData <- enrol_site() %>% arrange(match(Month, month.name))
       }
       else{
-        filteredData <- enrol_site()%>% filter(`Site ID` %in% input$site)
+        filteredData <- enrol_site()%>% arrange(match(Month, month.name)) %>% filter(`Site ID` %in% input$site)
       }
       return(filteredData)
     }
@@ -227,11 +227,11 @@ mod_enrollments_filters_server <- function(input, output, session, parent_sessio
   # reset filters
   observeEvent(input$en_reset,{
     print("Clined in enroll")
-    # values_to_display$enrol_data <- NULL
-    values_to_display$enrol_data <- raw_data
-    # enrol_final <- raw_data
-    print(nrow(values_to_display$enrol_data))
+    values_to_display$enrol_data <- NULL
+    print(values_to_display$enrol_data)
+    # values_to_display$enrol_data <- raw_data
   })
+  
   
   return(enrol_final)
   

@@ -7,12 +7,12 @@
 #' @noRd 
 #'
 #' @importFrom shiny NS tagList 
-#' @import DT
+#' @import DT lubridate
 mod_enrollments_ui <- function(id){
   ns <- NS(id)
   tagList(
     fluidRow(
-      shinydashboard::box(title = "Box title", "Box content"),plotlyOutput(ns("lchart"))
+      div(plotlyOutput(ns("lchart")), style = "margin-right:10px;margin-left:10px;margin-top:5px")
     )
     
     # ,fluidRow(
@@ -52,11 +52,35 @@ mod_enrollments_ui <- function(id){
 #' @noRd 
 mod_enrollments_server <- function(input, output, session, dataset){
   ns <- session$ns
-
+  
+  ay <- list(
+    showline = TRUE,
+    mirror = "ticks",
+    linecolor = "grey",
+    linewidth = 0.5
+  )
+  
+  ax <- list(
+    showline = TRUE,
+    mirror = "ticks",
+    linecolor = "grey",
+    linewidth = 0.5
+  )
+  
    output$lchart <- renderPlotly({
-     # req(dataset())
-     as.data.frame(dataset()) %>% group_by(Month) %>% summarise(Screened_sum=sum(total_screened)) %>%
-     plot_ly(x=~Month, y=~Screened_sum, type="scatter", mode="lines+markers")
+     req(dataset())
+     # print(dataset() %>% group_by(Month) %>% summarise(Screened_sum=sum(total_screened,na.rm = TRUE)) %>% arrange(match(Month, month.name)))
+     final_df <- as.data.frame(dataset()) %>% group_by(Month) %>% summarise(Screened_sum=sum(total_screened,na.rm = TRUE),Enrolled_sum=sum(total_enrolled,na.rm = TRUE)) 
+     # print(final_df)
+     
+     plot_ly(final_df) %>% 
+       layout(yaxis = list(title = FALSE)) %>%
+       add_trace(x = ~Month, y = ~Screened_sum, type='scatter', mode = "lines", yaxis = "y1", line = list(color = 'yellow'),name = 'Screened') %>%
+       add_trace(x = ~Month, y = ~Enrolled_sum, type='scatter', mode = "lines", yaxis = "y1", line = list(color = 'red'), name = 'Enrolled') %>% 
+       layout(plot_bgcolor='lightgrey', paper_bgcolor='#AAF0D1', yaxis = ay, xaxis = ax,
+              title = list(text = "Screened Vs Enrolled Across Months", y = 0.98)) %>% 
+       layout(legend = list(x = 0.1, y = 0.3))
+     
    })
 }
     

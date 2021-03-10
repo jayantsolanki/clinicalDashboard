@@ -26,12 +26,18 @@ trial_data <- function(
         incProgress(9/11, detail = paste("Reading pain", 10))
         
         session$userData$enrol <- read_excel(system.file("extdata", "enrollments.xlsx", package = "protoDash", mustWork = TRUE))
+        # session$userData$enrol <- data_frame[order(session$userData$enrol["Enrollment date"]),]
+        print(as.data.frame(session$userData$enrol) %>% filter(Country %in% "CAN")) 
         session$userData$enrol <- as.data.frame(session$userData$enrol)
         session$userData$enrol['Screened'] <- ifelse(session$userData$enrol['Screened'] == "Y",1,ifelse(session$userData$enrol['Screened'] == "N", 0 , NA))
         session$userData$enrol['Enrolled'] <- ifelse(session$userData$enrol['Enrolled'] == "Y",1,ifelse(session$userData$enrol['Enrolled'] == "N", 0 , NA))
-        session$userData$enrol['Month'] <- format(session$userData$enrol['Enrollment date'],"%B")
-        session$userData$enrol_groupby <- session$userData$enrol %>% group_by(Month, Country, Gender, `Treatment Arm`, `Site ID`) %>% 
-        summarise(total_screened = sum(Screened),total_enrolled = sum(Enrolled))  
+        # session$userData$enrol['Month'] <- format(session$userData$enrol['Enrollment date'],"%B")
+        session$userData$enrol_groupby <- session$userData$enrol %>% mutate(Month = format(floor_date(`Enrollment date`,"month"),"%D")) %>% group_by(Month, Country, Gender, `Treatment Arm`, `Site ID`) %>% 
+        summarise(total_screened = sum(Screened),total_enrolled = sum(Enrolled)) 
+        print(session$userData$enrol_groupby)
+        
+        
+        # print(session$userData$enrol_groupby %>% arrange(match(Month, month.name)))
         incProgress(10/11, detail = paste("Reading pain", 11))
         
         
