@@ -18,3 +18,7 @@
 .control-sidebar-heading {
 display: none; /* for removing unnecessary padding*/
 }
+
+.content-wrapper {
+    background-color: gray;
+}

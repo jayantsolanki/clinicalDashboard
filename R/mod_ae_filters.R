@@ -12,7 +12,8 @@ mod_ae_filters_ui <- function(id){
   tagList(
       title = "AE Filters",
       width = NULL,
-      sliderInput("slider", "Slider input:", 1, 100, 50),
+      selectInput(ns("groupby"), "Group By", choices = c("Month", "Country", "gender", "Site ID", "Treatment Group"), multiple = TRUE),
+      uiOutput(ns("coun")),
       textInput("text", "Text input here:")
   )
 }
@@ -22,6 +23,23 @@ mod_ae_filters_ui <- function(id){
 #' @noRd 
 mod_ae_filters_server <- function(input, output, session){
   ns <- session$ns
+  observe({
+    print(input$groupby)
+    print(length(input$groupby))
+    if(length(input$groupby) > 1){
+      output$coun <- renderUI({
+        selectInput(ns("country"), "Country", selected = c("2"), choices = c(1,2))
+      })
+    }
+    else{
+      output$coun <- renderUI({})
+    }
+    
+  })
+  observe({
+    print(input$country)
+  })
+  
  
 }
     
