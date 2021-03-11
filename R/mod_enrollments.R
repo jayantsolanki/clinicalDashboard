@@ -74,11 +74,11 @@ mod_enrollments_server <- function(input, output, session, dataset){
      # print(final_df)
      
      plot_ly(final_df) %>% 
-       layout(yaxis = list(title = FALSE)) %>%
+       layout(yaxis = list(title = "Total")) %>%
        add_trace(x = ~Month, y = ~Screened_sum, type='scatter', mode = "lines", yaxis = "y1", line = list(color = 'yellow'),name = 'Screened') %>%
        add_trace(x = ~Month, y = ~Enrolled_sum, type='scatter', mode = "lines", yaxis = "y1", line = list(color = 'red'), name = 'Enrolled') %>% 
-       layout(plot_bgcolor='lightgrey', paper_bgcolor='#AAF0D1', yaxis = ay, xaxis = ax,
-              title = list(text = "Screened Vs Enrolled Across Months", y = 0.98)) %>% 
+       layout(plot_bgcolor='grey', paper_bgcolor='#AAF0D1', yaxis = ay, xaxis = ax,
+              title = list(text = "Screened Vs Enrolled Records Across Months", y = 0.98)) %>% 
        layout(legend = list(x = 0.1, y = 0.3))
      
    })

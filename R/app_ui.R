@@ -14,7 +14,8 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # List the first level UI elements here
     shinydashboardPlus::dashboardPagePlus(
-      skin = "green-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
+      skin = "blue-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
+      # "green-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
       header = shinydashboardPlus::dashboardHeaderPlus(
         title = "Clinical Data Monitoring Dashboard",
         enable_rightsidebar = TRUE,

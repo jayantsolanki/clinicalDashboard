@@ -225,12 +225,12 @@ mod_enrollments_filters_server <- function(input, output, session, parent_sessio
   })
   
   # reset filters
-  observeEvent(input$en_reset,{
-    print("Clined in enroll")
-    values_to_display$enrol_data <- NULL
-    print(values_to_display$enrol_data)
-    # values_to_display$enrol_data <- raw_data
-  })
+  # observeEvent(input$en_reset,{
+  #   print("Clined in enroll")
+  #   values_to_display$enrol_data <- NULL
+  #   print(values_to_display$enrol_data)
+  #   # values_to_display$enrol_data <- raw_data
+  # })
   
   
   return(enrol_final)
