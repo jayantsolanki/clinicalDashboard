@@ -2,7 +2,7 @@
 #' 
 #' @param request Internal parameter for `{shiny}`. 
 #'     DO NOT REMOVE.
-#' @import shiny
+#' @import shiny shinyjs
 #' @noRd
 app_ui <- function(request) {
   mod_Home_ui("Home_ui_1")
@@ -14,7 +14,8 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # List the first level UI elements here
     shinydashboardPlus::dashboardPagePlus(
-      skin = "green-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
+      skin = "blue-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
+      # "green-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
       header = shinydashboardPlus::dashboardHeaderPlus(
         title = "Clinical Data Monitoring Dashboard",
         enable_rightsidebar = TRUE,
@@ -24,7 +25,7 @@ app_ui <- function(request) {
       sidebar = shinydashboard::dashboardSidebar(
         shinydashboard::sidebarMenu(
           # Setting id makes input$tabs give the tabName of currently-selected tab
-          id = "tabs",
+          id = "tabs",#use this to access your tab ids
           shinydashboard::menuItem("Enrollment", icon = icon("chart-pie"), tabName = "enrollments"),
           shinydashboard::menuItem(
             "Adverse Events", 
@@ -42,6 +43,7 @@ app_ui <- function(request) {
       ),
       # Show the appropriate tab's content in the main body of our dashboard when we select it
       body = shinydashboard::dashboardBody(
+        shinyjs::useShinyjs(), # calling shinyjs
         shinydashboard::tabItems(
           shinydashboard::tabItem("enrollments", mod_enrollments_ui("enrollments_ui_1")),
           shinydashboard::tabItem("ae_overview", mod_ae_overview_ui("ae_overview_ui_1")),
@@ -72,6 +74,10 @@ app_ui <- function(request) {
           conditionalPanel(
             condition = "input.tabs == 'ae_overview' | input.tabs == 'ae_figures' | input.tabs == 'ae_listings'",
             mod_ae_filters_ui("ae_filters_ui_1")
+          ),
+          conditionalPanel(
+            condition = "input.tabs == 'enrollments'",
+            mod_enrollments_filters_ui("enrollments_filters_ui_1")
           )
         ),
         # shinydashboardPlus::rightSidebarTabContent(
@@ -87,7 +93,7 @@ app_ui <- function(request) {
         # )
         background = "white"
         ),
-      title = "Clinical Data Monitoring Dashboard",
+      title = "Clinical Data Monitoring Dashboard"
     )
 
   )

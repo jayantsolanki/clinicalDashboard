@@ -16,7 +16,11 @@
 ## Dependencies ----
 ## Add one line by package you want to add as dependency
 # usethis::use_package( "thinkr" )
-
+usethis::use_package( "dplyr" )
+usethis::use_package( "shinyjs" )
+usethis::use_package( "plotly" )
+usethis::use_package( "readxl" )
+usethis::use_package( "lubridate" )
 # ## Add modules ----
 # ## Create a module infrastructure in R/
 # golem::add_module( name = "name_of_module1" ) # Name of the module
@@ -47,9 +51,10 @@ golem::add_module( name = "ae_listing" )
 golem::add_module( name = "ae_figures" )
 golem::add_module( name = "ae_filters" )
 golem::add_module( name = "vitals_labs" )
-# this module is for populating vitals tab
+
 golem::add_module(name = "vitals")
 golem::add_module( name = "vitals_filters" )
+golem::add_module( name = "enrollments_filters" )
 
 #####################
 

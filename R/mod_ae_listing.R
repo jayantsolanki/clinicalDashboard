@@ -1,18 +1,26 @@
 #' ae_listing UI Function
 #'
-#' @description A shiny Module.
+#' @description A shiny Module for plotting Adverse Events listing
 #'
 #' @param id,input,output,session Internal parameters for {shiny}.
-#'
+#' @param dataset data frame (reactive) with variables necessary for adae listing
 #' @noRd 
 #'
 #' @importFrom shiny NS tagList 
 mod_ae_listing_ui <- function(id){
   ns <- NS(id)
   tagList(
-    box(
-      title = "Title 1", width = NULL, solidHeader = TRUE, status = "primary",
-      "Box content"
+    fluidRow(
+      column(
+        width = 12,
+        shinydashboard::box(
+          width = NULL,
+          title = "Adverse Event Listing",
+          DT::dataTableOutput(
+            ns("aeListing")
+          )
+        )
+      )
     )
   )
 }
@@ -20,9 +28,14 @@ mod_ae_listing_ui <- function(id){
 #' ae_listing Server Function
 #'
 #' @noRd 
-mod_ae_listing_server <- function(input, output, session){
+mod_ae_listing_server <- function(input, output, session, dataset){
   ns <- session$ns
- 
+  output$aeListing = DT::renderDataTable({
+    DT::datatable(
+      dataset(), 
+      selection = 'single',
+      options = list(scrollX = TRUE))
+  })
 }
     
 ## To be copied in the UI
