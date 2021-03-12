@@ -1,4 +1,4 @@
-#' @import readxl
+#' @import readxl lubridate
 trial_data <- function(
   session = getDefaultReactiveDomain()
 ){

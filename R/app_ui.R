@@ -77,7 +77,8 @@ app_ui <- function(request) {
           ),
           conditionalPanel(
             condition = "input.tabs == 'enrollments'",
-            mod_enrollments_filters_ui("enrollments_filters_ui_1")
+            # mod_enrollments_filters_ui("enrollments_filters_ui_1")
+            mod_enrollments_filters_functions_ui("enrollments_filters_functions_ui_1")
           )
         ),
         # shinydashboardPlus::rightSidebarTabContent(

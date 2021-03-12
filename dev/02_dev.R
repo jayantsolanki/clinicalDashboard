@@ -21,6 +21,7 @@ usethis::use_package( "shinyjs" )
 usethis::use_package( "plotly" )
 usethis::use_package( "readxl" )
 usethis::use_package( "lubridate" )
+usethis::use_package( "rlang" )
 # ## Add modules ----
 # ## Create a module infrastructure in R/
 # golem::add_module( name = "name_of_module1" ) # Name of the module
@@ -29,6 +30,7 @@ usethis::use_package( "lubridate" )
 ## Add helper functions ----
 ## Creates ftc_* and utils_*
 golem::add_fct( "dataAcquisition" )
+golem::add_fct( "function_file" )
 # golem::add_utils( "helpers" )
 
 ## External resources
@@ -44,17 +46,14 @@ golem::add_css_file( "custom" )
 
 # custom
 golem::add_module( name = "enrollments" )
-
 # golem::add_module( name = "adverse_events" )
 golem::add_module( name = "ae_overview" )
 golem::add_module( name = "ae_listing" )
 golem::add_module( name = "ae_figures" )
 golem::add_module( name = "ae_filters" )
 golem::add_module( name = "vitals_labs" )
-
-golem::add_module(name = "vitals")
-golem::add_module( name = "vitals_filters" )
 golem::add_module( name = "enrollments_filters" )
+golem::add_module( name = "enrollments_filters_functions" )
 
 #####################
 
