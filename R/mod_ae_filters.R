@@ -15,7 +15,11 @@
 mod_ae_filters_ui <- function(id){
   ns <- NS(id)
   tagList(
-      h3("AE Filters"),
+      tags$head(
+        tags$style(HTML(paste0("#", ns("apply"),'{display:inline-block}'))),
+        tags$style(HTML(paste0("#", ns("reset"),'{display:inline-block}')))
+      ),
+      strong("AE Filters"),
       width = NULL,
       uiOutput(ns("siteId")),
       uiOutput(ns("trtarm")),
@@ -25,7 +29,6 @@ mod_ae_filters_ui <- function(id){
       uiOutput(ns("usubjid")),
       hr(),
       uiOutput(ns("apply")),
-      br(),
       uiOutput(ns("reset"))
   )
 }
@@ -174,7 +177,7 @@ mod_ae_filters_server <- function(input, output, session, parent_session){
     }
     selectInput(
       inputId = ns("siteId"),
-      label = "Choose Site ID",
+      label = "Site ID",
       choices = choices,
       selected = "All",
       multiple = TRUE,
@@ -190,7 +193,7 @@ mod_ae_filters_server <- function(input, output, session, parent_session){
     }
     selectInput(
       inputId = ns("trtarm"),
-      label = "Choose Treatment Arm",
+      label = "Treatment Arm",
       choices = choices,
       selected = "All",
       multiple = TRUE,
@@ -207,7 +210,7 @@ mod_ae_filters_server <- function(input, output, session, parent_session){
     }
     selectInput(
       inputId = ns("aebodsys"),
-      label = "Choose System of Class",
+      label = "System Organ Class",
       choices = choices,
       selected = "All",
       multiple = TRUE,
@@ -223,7 +226,7 @@ mod_ae_filters_server <- function(input, output, session, parent_session){
     }
     selectInput(
       inputId = ns("aedecod"),
-      label = "Choose Preferred terms",
+      label = "Preferred Terms",
       choices = choices,
       selected = "All",
       multiple = TRUE,
@@ -239,7 +242,7 @@ mod_ae_filters_server <- function(input, output, session, parent_session){
     }
     selectInput(
       inputId = ns("gender"),
-      label = "Choose Gender",
+      label = "Gender",
       choices = choices,
       selected = "All",
       multiple = TRUE,
@@ -255,7 +258,7 @@ mod_ae_filters_server <- function(input, output, session, parent_session){
     }
     selectInput(
       inputId = ns("usubjid"),
-      label = "Choose Subject ID",
+      label = "Subject ID",
       choices = choices,
       selected = "All",
       multiple = TRUE,
@@ -267,7 +270,8 @@ mod_ae_filters_server <- function(input, output, session, parent_session){
     actionButton(
       inputId = ns("apply"),
       label = "Apply",
-      icon = icon("sync"), 
+      icon = icon("sync"),
+      class = "btn-success",
       width = NULL)
   })
   
@@ -275,7 +279,8 @@ mod_ae_filters_server <- function(input, output, session, parent_session){
     actionButton(
       inputId = ns("reset"),
       label = "Clear",
-      icon = icon("window-close"), 
+      icon = icon("window-close"),
+      class = "btn-info",
       width = NULL)
   })
   

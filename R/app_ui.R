@@ -13,8 +13,8 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # List the first level UI elements here
-    shinydashboardPlus::dashboardPagePlus(
-      skin = "green-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
+    ui = tags$body(class="skin-green-light sidebar-mini control-sidebar-open", shinydashboardPlus::dashboardPagePlus(
+      #skin = "green-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
       # "green-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
       header = shinydashboardPlus::dashboardHeaderPlus(
         title = "Clinical Data Monitoring Dashboard",
@@ -31,9 +31,9 @@ app_ui <- function(request) {
             "Adverse Events", 
             icon = icon("notes-medical"), 
             tabName = NULL,
-            shinydashboard::menuSubItem("Adverse Event Overview", tabName = "ae_overview"),
-            shinydashboard::menuSubItem("Adverse Event Figures", tabName = "ae_figures"),
-            shinydashboard::menuSubItem("Adverse Event Listings", tabName = "ae_listings")
+            shinydashboard::menuSubItem("AE Overview", tabName = "ae_overview"),
+            shinydashboard::menuSubItem("AE Figures", tabName = "ae_figures"),
+            shinydashboard::menuSubItem("AE Listings", tabName = "ae_listings")
           ),
           shinydashboard::menuItem("Vitals and Labs", icon = icon("heartbeat"), tabName = "vitalsLabs")
           # shinydashboard::menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
@@ -81,21 +81,10 @@ app_ui <- function(request) {
             mod_enrollments_filters_functions_ui("enrollments_filters_functions_ui_1")
           )
         ),
-        # shinydashboardPlus::rightSidebarTabContent(
-        #   id = 2,
-        #   title = "Tab 2",
-        #   textInput("caption", "Caption", "Data Summary")
-        # ),
-        # shinydashboardPlus::rightSidebarTabContent(
-        #   id = 3,
-        #   icon = "paint-brush",
-        #   title = "Tab 3",
-        #   numericInput("obs", "Observations:", 10, min = 1, max = 100)
-        # )
         background = "white"
         ),
       title = "Clinical Data Monitoring Dashboard"
-    )
+    ))
 
   )
 }

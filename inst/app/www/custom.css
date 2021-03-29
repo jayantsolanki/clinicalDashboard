@@ -19,6 +19,18 @@
 display: none; /* for removing unnecessary padding*/
 }
 
-.content-wrapper {
+/*.content-wrapper {
     background-color: gray;
+}*/
+.content {
+  padding-top: 0px;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+.control-sidebar-tabs li a{ /*remove unnecessary padding*/
+  padding: 0px;
+}
+
+.fa.fa-sliders-h { /* hide that slider icon*/
+    display: none;
 }
