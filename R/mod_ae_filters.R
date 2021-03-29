@@ -36,11 +36,22 @@ mod_ae_filters_ui <- function(id){
 mod_ae_filters_server <- function(input, output, session, parent_session){
   ns <- session$ns
   adae <- session$userData$adae
+  adsl <- session$userData$adsl
   
   # generating intermediate data for filters
   # ae_data <- reactiveValues(adae = adae)
   ae_data <- reactiveValues()
-  ae_data$adae <- adae
+  mergedDT <- left_join(adae[, ], adsl[, which(names(adsl) %in% c("USUBJID", "TRTSDT", "TRTEDT","ARM", ""))], by = "USUBJID")
+  # formatting dates
+  mergedDT$ASTDT = as.Date(parse_date_time(mergedDT$ASTDT, orders = c("ymd", "dmy", "mdy")))
+  mergedDT$AENDT = as.Date(parse_date_time(mergedDT$AENDT, orders = c("ymd", "dmy", "mdy")))
+  mergedDT$TRTSDT = as.Date(parse_date_time(mergedDT$TRTSDT, orders = c("ymd", "dmy", "mdy")))
+  mergedDT$TRTEDT = as.Date(parse_date_time(mergedDT$TRTEDT, orders = c("ymd", "dmy", "mdy")))
+  #filling it with random sample, since aetoxgr and aeser are absent
+  mergedDT$AETOXGR <- sample(1:5, size = nrow(mergedDT), replace = TRUE)
+  mergedDT$AESER <- sample(0:1, size = nrow(mergedDT), replace = TRUE)
+  
+  ae_data$adae <- mergedDT
   adae_trtarm <- reactive({
     if(!is.null(input$siteId)){
       if("All" %in% input$siteId){
