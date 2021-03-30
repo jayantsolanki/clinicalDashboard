@@ -21,8 +21,18 @@ mod_ae_overview_ui <- function(id){
           # height = "250px",
           width = 12,
           tabPanel("AE Toxicity Distribution",
-                   "AE distribution by Toxicity",
-                   dataTableOutput(ns("aeToxDis"))),
+            fluidRow(
+              column(width = 12,
+                     DT::dataTableOutput(ns("aeToxDis")) 
+              )
+            ),
+            br(),
+            fluidRow(
+              column(width = 12,
+                     DT::dataTableOutput(ns("aeToxDisListing")) 
+              )
+            )
+          ),
           tabPanel("AE Overall distribution",
                    "AE distribution by groups",
                    plotlyOutput(ns("plot3")))
@@ -39,34 +49,35 @@ mod_ae_overview_server <- function(input, output, session, dataset){
   ns <- session$ns
   
   # for AE Toxicity Distribution
-  incidenceRateTable <- reactive({
+  Final_Table <- reactive({
     req(dataset())
-    
-    Final_Table <- dataset() %>% 
-        select(USUBJID, AEBODSYS, AETOXGR, AESER, TRTA)  %>% 
-        distinct(USUBJID, AEBODSYS, AETOXGR, AESER, TRTA)  
-    incidenceRateTable <- as.data.frame(matrix(NA, nrow=0, ncol=1 + 3*length(unique(Final_Table$TRTA)))) %>% 
+    dataset() %>% 
+    select(USUBJID, AEBODSYS, AETOXGR, AESER, TRTA)  %>% 
+    distinct(USUBJID, AEBODSYS, AETOXGR, AESER, TRTA)  
+  })
+  incidenceRateTable <- reactive({
+    req(Final_Table())
+    incidenceRateTable <- as.data.frame(matrix(NA, nrow=0, ncol=1 + 3*length(unique(Final_Table()$TRTA)))) %>% 
       mutate_all(as.integer)
     colnames(incidenceRateTable)[1] <- "AEBODSYS"
     incidenceRateTable$AEBODSYS <- as.character(incidenceRateTable$AEBODSYS)
     
-    for (arm in unique(Final_Table$TRTA)){
-      anyGrade <- Final_Table %>% 
+    for (arm in unique(Final_Table()$TRTA)){
+      anyGrade <- Final_Table() %>% 
         filter(TRTA == arm) %>% 
         group_by(AEBODSYS)  %>% 
         summarize(patients=length(unique(USUBJID)))  
-      grad3plus <- Final_Table %>% 
+      grad3plus <- Final_Table() %>% 
         filter(AETOXGR %in% c(3,4,5), TRTA == arm) %>% 
         group_by(AEBODSYS)  %>% 
         summarize(patients=length(unique(USUBJID)))  
-      seriousAE <- Final_Table %>% 
+      seriousAE <- Final_Table() %>% 
         filter(AESER == 1, TRTA == arm) %>% 
         group_by(AEBODSYS)  %>% 
         summarize(patients=length(unique(USUBJID))) 
       tempTable <- left_join(anyGrade, grad3plus, all =T, by = "AEBODSYS") %>% 
         left_join(., seriousAE, all =T, by = "AEBODSYS") %>% 
         replace(is.na(.), 0)
-      print(tempTable)
       if (nrow(incidenceRateTable) == 0){
         incidenceRateTable <- rbind(incidenceRateTable, tempTable)
         
@@ -77,21 +88,27 @@ mod_ae_overview_server <- function(input, output, session, dataset){
       }
       
     }
+    incidenceRateTable
   })
 
+  incidenceRateTable_selectedRow <- eventReactive(input$aeToxDis_rows_selected, {
+    print(input$aeToxDis_rows_selected)
+    print(incidenceRateTable()[c(input$aeToxDis_rows_selected), c(1)])
+    # incidenceRateTable()[, c("AEBODSYS")][c(input$aeToxDis_rows_selected)]
+  })
   
   output$aeToxDis = DT::renderDataTable({
-    # req(dataset())
+    req(Final_Table())
     req(incidenceRateTable())
     sketch = htmltools::withTags(table(
       class = 'display',
       thead(
         tr(
           th(rowspan = 2, 'System Organ Class'),
-          lapply(unique(dataset()$TRTA), th, colspan = 3)
+          lapply(unique(Final_Table()$TRTA), th, colspan = 3)
         ),
         tr(
-          lapply(rep(c('Any Grades', 'Grade 3+', 'SAE'), length(unique(dataset()$TRTA))), th)
+          lapply(rep(c('Any Grades', 'Grade 3+', 'SAE'), length(unique(Final_Table()$TRTA))), th)
         )
       )
     ))
@@ -99,16 +116,21 @@ mod_ae_overview_server <- function(input, output, session, dataset){
     
     DT::datatable(
       incidenceRateTable(), 
-      selection = 'single',
+      selection = list(mode = "single"),
       options = list(scrollX = TRUE),
       container = sketch, 
       rownames = FALSE)
   })
-  # 
-  # output$plot2 <- renderPlotly({
-  #   req(dataset())
-  #   ggplot(dataset(), aes( x = reorder(AEBODSYS,AEBODSYS,length), fill = TRTA )) + geom_bar() + coord_flip()
-  # })
+  
+  output$aeToxDisListing <- DT::renderDataTable({
+    req(incidenceRateTable_selectedRow())
+    selectedRow <- dataset() %>% filter(AEBODSYS %in% incidenceRateTable_selectedRow()$AEBODSYS)
+    DT::datatable(
+      selectedRow, 
+      selection = list(mode = "single"),
+      options = list(scrollX = TRUE),
+      rownames = T)
+  })
   
   output$plot3 <- renderPlotly({
     req(dataset())

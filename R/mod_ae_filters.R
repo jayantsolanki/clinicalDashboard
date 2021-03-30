@@ -174,7 +174,7 @@ mod_ae_filters_server <- function(input, output, session, parent_session){
   observeEvent(input$reset,{
     print("reset clicked")
     ae_data$adae <- NULL
-    ae_data$adae <- adae
+    ae_data$adae <- mergedDT
 
   })
 
