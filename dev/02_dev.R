@@ -22,6 +22,7 @@ usethis::use_package( "plotly" )
 usethis::use_package( "readxl" )
 usethis::use_package( "lubridate" )
 usethis::use_package( "rlang" )
+usethis::use_package( "shinycssloaders" )
 # ## Add modules ----
 # ## Create a module infrastructure in R/
 # golem::add_module( name = "name_of_module1" ) # Name of the module
