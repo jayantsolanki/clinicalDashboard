@@ -13,13 +13,14 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # List the first level UI elements here
-    ui = tags$body(class="skin-green-light sidebar-mini control-sidebar-open", shinydashboardPlus::dashboardPagePlus(
+    ui = shinydashboardPlus::dashboardPage(
+      options = list(sidebarExpandOnHover = TRUE),
       #skin = "green-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
       # "green-light", #“blue”, “blue-light”, “black”, “black-light”, “purple”, “purple-light”, “green”, “green-light”, “red”, “red-light”, “yellow”, “yellow-light”, “midnight”
-      header = shinydashboardPlus::dashboardHeaderPlus(
-        title = "Clinical Data Monitoring Dashboard",
-        enable_rightsidebar = TRUE,
-        rightSidebarIcon = "gears"
+      header = shinydashboardPlus::dashboardHeader(
+        # title = "Clinical Data Monitoring Dashboard",
+        # enable_rightsidebar = TRUE,
+        # rightSidebarIcon = "gears"
       ),
       # Create our navigation menu that links to each of the tabs we defined
       sidebar = shinydashboard::dashboardSidebar(
@@ -55,36 +56,40 @@ app_ui <- function(request) {
           # shinydashboard::tabItem("ev", mod_Exercises_ui("Exercises_ui_1"))
         ) 
       ),
-      rightsidebar = shinydashboardPlus::rightSidebar(
-        # conditionalPanel(
-        #   condition = "input.tabs == 'ae_overview' | input.tabs == 'ae_figures' | input.tabs == 'ae_listings'",
-        #   # mod_ae_filters_ui("ae_filters_ui_1")
-        #   shinydashboardPlus::rightSidebarTabContent(
-        #     id = "ae_filters",
-        #     icon = "desktop",
-        #     background="white",
-        #     mod_ae_filters_ui("ae_filters_ui_1")
-        #   )
-        # )
-        shinydashboardPlus::rightSidebarTabContent(
-          id = 1,
-          # title = "Filters",
-          icon = "sliders-h",
-          active = TRUE,
-          conditionalPanel(
-            condition = "input.tabs == 'ae_overview' | input.tabs == 'ae_figures' | input.tabs == 'ae_listings'",
-            mod_ae_filters_ui("ae_filters_ui_1")
-          ),
-          conditionalPanel(
-            condition = "input.tabs == 'enrollments'",
-            # mod_enrollments_filters_ui("enrollments_filters_ui_1")
-            mod_enrollments_filters_functions_ui("enrollments_filters_functions_ui_1")
+      controlbar = shinydashboardPlus::dashboardControlbar(
+        id = "rightmenu",
+        # disable = FALSE,
+        # width = 230,
+        collapsed = FALSE,
+        overlay = FALSE,
+        skin = "dark",
+        tagList(
+          fluidRow(
+            column(
+              width = 1
+            ),
+            column(
+              width = 10, 
+              conditionalPanel(
+                condition = "input.tabs == 'ae_overview' | input.tabs == 'ae_figures' | input.tabs == 'ae_listings'",
+                mod_ae_filters_ui("ae_filters_ui_1")
+              ),
+              conditionalPanel(
+                condition = "input.tabs == 'enrollments'",
+                # mod_enrollments_filters_ui("enrollments_filters_ui_1")
+                mod_enrollments_filters_functions_ui("enrollments_filters_functions_ui_1")
+              )
+            ),
+            column(
+              width = 1
+            )
           )
-        ),
-        background = "white"
-        ),
+        )
+
+        # background = "white"
+      ),
       title = "Clinical Data Monitoring Dashboard"
-    ))
+    )
 
   )
 }

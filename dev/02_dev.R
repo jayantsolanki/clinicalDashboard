@@ -15,6 +15,28 @@
 
 ## Dependencies ----
 ## Add one line by package you want to add as dependency
+#installation, run in RPI Console
+# REPO="c('https://pkgs.r4pi.org/aarch64', 'http://cran.rstudio.com/')" # For R installed from R4Pi
+# sudo su - -c "R -e \"install.packages('dplyr', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('plotly', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('shinyjs', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('readxl', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('lubridate', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('rlang', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('shinycssloaders', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('config', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('golem', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('processx', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('DT', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('glue', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('htmltools', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('shinydashboard', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('shinydashboardPlus', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('ggplot2', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('pkgload', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('usethis', repos=$REPO)\""
+# sudo su - -c "R -e \"install.packages('shinipsum', repos=$REPO)\""
+
 # usethis::use_package( "thinkr" )
 usethis::use_package( "dplyr" )
 usethis::use_package( "shinyjs" )

@@ -132,8 +132,8 @@ mod_ae_overview_server <- function(input, output, session, dataset){
         filter(AESER == 1, TRTA == arm) %>% 
         group_by_at(groupVar)  %>% 
         summarize(patients=length(unique(USUBJID))) 
-      tempTable <- left_join(anyGrade, grad3plus, all =T, by = groupVar) %>% 
-        left_join(., seriousAE, all =T, by = groupVar) %>% 
+      tempTable <- left_join(anyGrade, grad3plus, multiple = "all", by = groupVar) %>% 
+        left_join(., seriousAE, multiple = "all", by = groupVar) %>% 
         replace(is.na(.), 0)
       if (nrow(incidenceRateTable) == 0){
         incidenceRateTable <- rbind(incidenceRateTable, tempTable)
